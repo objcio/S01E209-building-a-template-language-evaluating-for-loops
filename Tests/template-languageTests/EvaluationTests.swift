@@ -83,7 +83,7 @@ final class EvaluationTests: XCTestCase {
         XCTAssertThrowsError(try context.evaluate(parsed)) { err in
             let e = err as! EvaluationError
             XCTAssertEqual(e.reason, .expectedHTMLConvertible)
-            XCTAssertEqual(e.range, input.range(of: "bar"))
+            XCTAssertEqual(e.range, input.range(of: "foo"))
         }
     }
 }
